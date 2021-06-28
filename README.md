@@ -1,3 +1,5 @@
 # TATT
-======
-Text Encode/Decode tool created for our [our Discord server](https://discord.gg/rMKmCfqH)
+
+Text Encode/Decode tool created for [our Discord server](https://discord.gg/rMKmCfqH)
+
+( Created for fun pursposes =) )
