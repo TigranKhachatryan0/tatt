@@ -1,8 +1,5 @@
 import sys
 import shlex
-import logging
-
-logging.basicConfig(filename='../logs.txt', level=logging.DEBUG)
 
 def Info(message="Something was supposed to happen here"):
     print("[information] >> " + str(message))
