@@ -118,6 +118,13 @@ def main():
         executablelist.append(str(listlength))
         executablelist.append(i[3:len(i)-10])
         listlength=listlength+1
+    for i in glob.glob("./*.py"):
+        if not(i == "./pluginsupport.py") and not(i[2:len(i)] in executablelist):
+            print("[" + str(listlength) + "]: " + i[2:len(i)-3])
+            print(" " + len(str(listlength))*" " + "   " + i[2:len(i)] + " encoding")
+            executablelist.append(str(listlength))
+            executablelist.append(i[2:len(i)])
+            listlength=listlength+1
     print("[q]: Quit\n     Exit the program")
     while True:
         info_print_very_verbose("[while true loop] >> input str(tatt_mode)")
