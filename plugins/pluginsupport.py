@@ -6,16 +6,24 @@ logging.basicConfig(filename='../logs.txt', level=logging.DEBUG)
 
 def Info(message="Something was supposed to happen here"):
     print("[information] >> " + str(message))
-    logging.info(str(message))
+    f = open("../logs/info.txt", "a")
+    f.write(message + "\n")
+    f.close()
 def Error(message="Unknown error"):
     print("[\033[91merror\033[0m] >> " + str(message))
-    logging.error(str(message))
+    f = open("../logs/error.txt", "a")
+    f.write(message + "\n")
+    f.close()
 def Warning(message="A warning was issued by the plug-in"):
     print("[\033[93mwarning\033[0m] >> " + message)
-    logging.warning(str(message))
+    f = open("../logs/warning.txt", "a")
+    f.write(message + "\n")
+    f.close()
 def DebugInformation(message="Plugin is still running"):
     print("[\033[93mdebug\033[0m] >> " + message)
-    logging.debug(str(message))
+    f = open("../logs/debug.txt", "a")
+    f.write(message + "\n")
+    f.close()
 
 def MaintainerInfo(PluginMaintainerName,PluginMaintainerAdditionalNotes, PluginMaintainerEmail="<unknown>"):
     print("Maintainer of the plugin: " + PluginMaintainerName)
