@@ -11,12 +11,12 @@ def Info(message="Something was supposed to happen here"):
     f.close()
 def Error(message="Unknown error"):
     print("[\033[91merror\033[0m] >> " + str(message))
-    f = open("../logs/error.txt", "a")
+    f = open("../logs/errors.txt", "a")
     f.write(message + "\n")
     f.close()
 def Warning(message="A warning was issued by the plug-in"):
     print("[\033[93mwarning\033[0m] >> " + message)
-    f = open("../logs/warning.txt", "a")
+    f = open("../logs/warnings.txt", "a")
     f.write(message + "\n")
     f.close()
 def DebugInformation(message="Plugin is still running"):
